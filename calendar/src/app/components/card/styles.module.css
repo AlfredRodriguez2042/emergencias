@@ -1,0 +1,47 @@
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+.card{
+    width: 100%;   
+}
+.cardTitle{
+    
+}
+.cardSubTitle, .cardTitle{
+    font-weight: bold;
+    text-align: center;
+}
+.cardSubTitle:last-child{
+    color:red;
+}
+.cardSubTitle:first-child{
+    color:red;
+}
+.cardContent{
+    position: relative;
+}
+.cardOverlay{
+    position: absolute;
+    background: rgba(45,45,45, .1);
+    color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition:all .25s ease-in-out;
+}
+.active{
+    border:1px solid red;
+    background: rgba(45,45,45, .8);
+}
+.cardItem{
+    display: flex;
+    position: relative;
+    aspect-ratio: 16/9;
+  
+}

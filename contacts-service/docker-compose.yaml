@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres
+    container_name: postgresql-contacts
+    ports:
+      - '5432:${POSTGRES_PORT:-5432}'
+    environment:
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD:-postgres}'
+      POSTGRES_USER: '${POSTGRES_USER:-postgres}'
+      POSTGRES_DB: '${POSTGRES_DB:-contacts}'
+    volumes:
+     - '${PWD}/Docker/postgres/data/:/var/lib/postgres/data'
+
+

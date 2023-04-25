@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx commitlint -e $HUSKY_GIT_PARAMS ||
+(
+        echo '😤🏀👋😤 Get that weak shit out of here! 😤🏀👋😤
+                CommitLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+        false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
